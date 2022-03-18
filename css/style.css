@@ -7,6 +7,10 @@
 
 }
 
+.navbar{
+    height: 70px;
+}
+
 .logo img {
     width: 150px;
     height: auto;
@@ -39,4 +43,15 @@
     margin-top: 130px;
     animation: bounce 2s infinite;
 
+}
+
+a:hover{
+    background-color: orangered;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu{
+    background-color: black;
+    padding-top: 30px;
 }
