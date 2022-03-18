@@ -74,6 +74,9 @@ a:hover{
 }
 
 .card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     color: white;
     font-size: 20px;
 }
