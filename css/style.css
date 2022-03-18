@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
 
 }
 
-.navbar{
+.navbar {
     height: 70px;
+}
+
+.navbar li {
+    padding: 0 5px;
 }
 
 .logo img {
@@ -45,35 +50,47 @@
 
 }
 
-a:hover{
+.cart ion-icon {
+    font-size: 30px;
+    vertical-align: middle;
+
+}
+
+.cart span {
+    color: white;
+    padding-left: 5px;
+}
+
+
+a:hover {
     background-color: orangered;
     border-radius: 10px;
     padding: 10px;
 }
 
-.menu{
+.menu {
     background-color: black;
     padding-top: 30px;
     justify-content: center;
 }
 
-.menu .intro h3{
+.menu .intro h3 {
     color: orangered;
     padding: 50px;
 }
 
-.menu-size{
+.menu-size {
     display: flex;
     justify-content: center;
     padding: 0 10px;
 }
 
-.menu img{
+.menu img {
     width: 100%;
     height: auto;
 }
 
-.card-footer{
+.card-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
