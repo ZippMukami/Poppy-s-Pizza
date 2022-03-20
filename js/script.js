@@ -72,11 +72,27 @@ for (let i = 0; i < carts.length; i++) {
     })
 };
 
+function onLoadCartNumbers(){
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if (productNumbers){
+        document.querySelector('.cart span').textContent = productNumbers;
+    }
+}
 
 function cartNumber(product) {
+    console.log("The prolduct clicked is", product);
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
-    localStorage.setItem('cartNumbers')
 
+    if(productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent=productNumbers + 1;
 
+    } else{
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent=1;
+
+    }
 };
+
+onLoadCartNumbers();
