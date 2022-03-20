@@ -53,8 +53,6 @@ BOOTSTRAP
 
 jQuery
 
-JSON
-
 Git
 
 ---
