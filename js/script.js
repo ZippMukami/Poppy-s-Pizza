@@ -129,4 +129,29 @@ function totalCost(product) {
     console.log("The product price is", product.price);
 };
 
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".product");
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = " ";
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+
+                <div class = "product" >
+                     <ion-icon name="close-circle-outline"></ion-icon>
+                     <img src = "./pizza-images/${item.tag}.jpeg" >
+                <span> ${item.name}</span>
+                </div>
+
+
+`
+
+
+
+        })
+    }
+}
+
 onLoadCartNumbers();
+displayCart();

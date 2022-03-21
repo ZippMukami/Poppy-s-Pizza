@@ -106,7 +106,7 @@ a:hover {
 }
 
 .card-footer a{
-padding: 10px;
+/* padding: 10px; */
 }
 
 .card-footer a:hover{
@@ -121,7 +121,7 @@ background-color: transparent;
 }
 
 .cartDisplay h5{
-    padding:0 70px;
+    padding:0 10px;
     border-bottom: 2px solid grey;
 
 }
