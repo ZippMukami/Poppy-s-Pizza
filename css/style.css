@@ -105,15 +105,13 @@ a:hover {
     font-size: 20px;
 }
 
-.card-footer a {
-    /* padding: 10px; */
-}
+
 
 .card-footer a:hover {
     background-color: transparent;
 }
 
-.cartDisplay {
+.product-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -144,7 +142,7 @@ a:hover {
     align-items: center;
 }
 
-.product-total {
+.products-container {
     max-width: 650px;
     justify-content: center;
     margin: 0 auto;
@@ -152,3 +150,11 @@ a:hover {
     padding-bottom: 100px;
 
 }
+
+.products-container ion-icon {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+

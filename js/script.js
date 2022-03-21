@@ -142,7 +142,7 @@ function displayCart() {
 
                 <div class = "product" >
                      <ion-icon name="close-circle-outline" color="primary"></ion-icon>
-                     <img src = "./pizza-images/${item.tag}.jpeg" >
+                     
                      <span> ${item.name}</span>
                 </div>
 
