@@ -3,6 +3,7 @@ let carts = document.querySelectorAll(".add-cart");
 let products = [{
         name: "small",
         tag: "small pizza",
+        image: "",
         price: 500,
         inCart: 0
     },
@@ -10,6 +11,8 @@ let products = [{
     {
         name: "medium",
         tag: "medium pizza",
+        image: "",
+
         price: 1000,
         inCart: 0
     },
@@ -17,6 +20,8 @@ let products = [{
     {
         name: "large",
         tag: "large pizza",
+        image: "",
+
         price: 1500,
         inCart: 0
     },
@@ -24,6 +29,8 @@ let products = [{
     {
         name: "cheese",
         tag: "cheese toppings",
+        image: "",
+
         price: 200,
         inCart: 0
     },
@@ -31,6 +38,8 @@ let products = [{
     {
         name: "olive",
         tag: "olive toppings",
+        image: "",
+
         price: 200,
         inCart: 0
     },
@@ -38,6 +47,9 @@ let products = [{
     {
         name: "pepperoni",
         tag: "pepperoni toppings",
+        image: "",
+
+        image: "pepperoni.jpeg",
         price: 200,
         inCart: 0
     },
@@ -45,6 +57,7 @@ let products = [{
     {
         name: "thin",
         tag: "thin Crust",
+        image: "",
         price: 200,
         inCart: 0
     },
@@ -52,6 +65,8 @@ let products = [{
     {
         name: "thick",
         tag: "thick Crust",
+        image: "",
+
         price: 200,
         inCart: 0
     },
@@ -59,6 +74,8 @@ let products = [{
     {
         name: "crispy",
         tag: "crispy Crust",
+        image: "",
+
         price: 200,
         inCart: 0
     },
@@ -134,39 +151,104 @@ function displayCart() {
     cartItems = JSON.parse(cartItems);
     let productContainer = document.querySelector(".product");
     let cartCost = localStorage.getItem('totalCost');
-    
+
+    //     if (cartItems && productContainer) {
+    //         productContainer.innerHTML = " ";
+    //         Object.values(cartItems).map(item => {
+    //             productContainer.innerHTML += `
+
+    //                 <div class = "product" >
+    //                      <ion-icon name="close-circle-outline" color="primary"></ion-icon>
+    //                      <img class= "cart-image" src = "./pizza-images/${item.image}" >
+    //                      <span> ${item.name}</span>
+    //                 </div>
+
+    //                 <div class = "price" > ${item.price}</div>
+    //                 <div class = "quantity"> 
+    //                      <ion-icon class="decrease" name="caret-back-circle-outline" color="primary"></ion-icon> 
+    //                      <span> ${item.inCart}</span>
+    //                      <ion-icon name="caret-forward-circle-outline" color="primary"></ion-icon>
+    //                 </div>
+
+    //                 <div class = "total">
+    //                       $${item.inCart * item.price},00
+    //                 </div>
+
+
+    // `;
+
     if (cartItems && productContainer) {
         productContainer.innerHTML = " ";
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
+        
+        <table class="table align-middle mb-0 bg-white product">
+  <thead class="bg-light">
+    <tr>
+      <th>Product-title</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <img
+             class= src = "./pizza-images/${item.image}"
+              alt=""
+              style="width: 45px; height: 45px"
+              class="rounded-circle cart-image"
+              />
+          <div class="ms-3">
+          <span> ${item.name}</span>
+          </div>
+        </div>
+      </td>
+      <td>
+      <div class = "price" > ${item.price}</div>   
+    </td>
 
-                <div class = "product" >
-                     <ion-icon name="close-circle-outline" color="primary"></ion-icon>
-                     
-                     <span> ${item.name}</span>
-                </div>
+    <td>
+    <div class = "quantity"> 
+                          <ion-icon class="decrease" name="caret-back-circle-outline" color="primary"></ion-icon> 
+                         <span> ${item.inCart}</span>
+                         <ion-icon name="caret-forward-circle-outline" color="primary"></ion-icon>
+                    </div>
+      </td>
 
-                <div class = "price" > ${item.price}</div>
-                <div class = "quantity"> 
-                     <ion-icon class="decrease" name="caret-back-circle-outline" color="primary"></ion-icon> 
-                     <span> ${item.inCart}</span>
-                     <ion-icon name="caret-forward-circle-outline" color="primary"></ion-icon>
-                </div>
-
-                <div class = "total">
-                      $${item.inCart * item.price},00
-                </div>
-
-`;
+        <td>
+        <div class = "total">
+                          $${item.inCart * item.price},00
+                    </div>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
 
 
+  
+        
+        `
 
         });
 
-        productContainer.innerHTML += `
-            <div class = "basketTotalCointainer">
-                 <h4 class = "basketTotalTitle"> Basket Total </h4>
-                 <h4 class = "basketTotal"> $${cartCost},00 </h4>
+        // productContainer.innerHTML += `
+        //     <div class = "basketTotalCointainer">
+        //          <h4 class = "basketTotalTitle"> Basket Total </h4>
+        //          <h4 class = "basketTotal"> $${cartCost},00 </h4>
+
+
+productContainer.innerHTML +=`
+<tr>
+<td>
+<div class = "basketTotalCointainer">
+          <h4 class = "basketTotalTitle"> Basket Total </h4> g
+          <h4 class = "basketTotal"> $${cartCost},00 </h4>
+         </td>
+</tr>
         `;
     }
 }
