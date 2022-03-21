@@ -237,7 +237,7 @@ productContainer.innerHTML +=`
 <tr>
 <td>
 <div class = "basketTotalCointainer">
-          <h4 class = "basketTotalTitle"> Basket Total </h4> g
+          <h4 class = "basketTotalTitle"> Basket Total </h4>
           <h4 class = "basketTotal"> $${cartCost},00 </h4>
          </td>
 </tr>
