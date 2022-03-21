@@ -133,6 +133,8 @@ function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
     let productContainer = document.querySelector(".product");
+    let cartCost = localStorage.getItem('totalCost');
+    
     if (cartItems && productContainer) {
         productContainer.innerHTML = " ";
         Object.values(cartItems).map(item => {
@@ -151,11 +153,21 @@ function displayCart() {
                      <ion-icon name="caret-forward-circle-outline" color="primary"></ion-icon>
                 </div>
 
-`
+                <div class = "total">
+                      $${item.inCart * item.price},00
+                </div>
+
+`;
 
 
 
-        })
+        });
+
+        productContainer.innerHTML += `
+            <div class = "basketTotalCointainer">
+                 <h4 class = "basketTotalTitle"> Basket Total </h4>
+                 <h4 class = "basketTotal"> $${cartCost},00 </h4>
+        `;
     }
 }
 
