@@ -139,11 +139,17 @@ function displayCart() {
             productContainer.innerHTML += `
 
                 <div class = "product" >
-                     <ion-icon name="close-circle-outline"></ion-icon>
+                     <ion-icon name="close-circle-outline" color="primary"></ion-icon>
                      <img src = "./pizza-images/${item.tag}.jpeg" >
-                <span> ${item.name}</span>
+                     <span> ${item.name}</span>
                 </div>
 
+                <div class = "price" > ${item.price}</div>
+                <div class = "quantity"> 
+                     <ion-icon class="decrease" name="caret-back-circle-outline" color="primary"></ion-icon> 
+                     <span> ${item.inCart}</span>
+                     <ion-icon name="caret-forward-circle-outline" color="primary"></ion-icon>
+                </div>
 
 `
 
