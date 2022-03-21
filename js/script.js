@@ -3,7 +3,7 @@ let carts = document.querySelectorAll(".add-cart");
 let products = [{
         name: "small",
         tag: "small pizza",
-        image: "",
+        image: "small.jpeg",
         price: 500,
         inCart: 0
     },
@@ -11,7 +11,7 @@ let products = [{
     {
         name: "medium",
         tag: "medium pizza",
-        image: "",
+        image: "large.jpeg",
 
         price: 1000,
         inCart: 0
@@ -20,7 +20,7 @@ let products = [{
     {
         name: "large",
         tag: "large pizza",
-        image: "",
+        image: "large3.jpeg",
 
         price: 1500,
         inCart: 0
@@ -29,7 +29,7 @@ let products = [{
     {
         name: "cheese",
         tag: "cheese toppings",
-        image: "",
+        image: "cheese.jpeg",
 
         price: 200,
         inCart: 0
@@ -38,7 +38,7 @@ let products = [{
     {
         name: "olive",
         tag: "olive toppings",
-        image: "",
+        image: "olive.jpeg",
 
         price: 200,
         inCart: 0
@@ -47,8 +47,6 @@ let products = [{
     {
         name: "pepperoni",
         tag: "pepperoni toppings",
-        image: "",
-
         image: "pepperoni.jpeg",
         price: 200,
         inCart: 0
@@ -57,7 +55,7 @@ let products = [{
     {
         name: "thin",
         tag: "thin Crust",
-        image: "",
+        image: "cheese.jpeg",
         price: 200,
         inCart: 0
     },
@@ -65,7 +63,7 @@ let products = [{
     {
         name: "thick",
         tag: "thick Crust",
-        image: "",
+        image: "olive.jpeg",
 
         price: 200,
         inCart: 0
@@ -74,7 +72,7 @@ let products = [{
     {
         name: "crispy",
         tag: "crispy Crust",
-        image: "",
+        image: "pepperoni.jpeg",
 
         price: 200,
         inCart: 0
@@ -195,13 +193,7 @@ function displayCart() {
     <tr>
       <td>
         <div class="d-flex align-items-center">
-          <img
-             class= src = "./pizza-images/${item.image}"
-              alt=""
-              style="width: 45px; height: 45px"
-              class="rounded-circle cart-image"
-              />
-          <div class="ms-3">
+          <img class= "cart-image" src = "./pizza-images/${item.image}" >
           <span> ${item.name}</span>
           </div>
         </div>
